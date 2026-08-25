@@ -7,7 +7,7 @@ GITLEAKS="$(command -v gitleaks || echo "$HOME/.local/bin/gitleaks")"
 
 if [ ! -x "$GITLEAKS" ]; then
   echo "pre_push: gitleaks not found — refusing to push unscanned."
-  echo "Install it, or bypass once with: yadm push --no-verify"
+  echo "Install it, or disable this hook: chmod -x \"$0\""
   exit 1
 fi
 
