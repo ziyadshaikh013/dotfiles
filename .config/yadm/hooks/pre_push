@@ -1,0 +1,24 @@
+#!/bin/sh
+# Backstop before anything leaves the machine: scan the FULL history, not just
+# staged changes. Catches anything that got in via --no-verify, an amend, or a
+# commit made before the pre_commit hook existed.
+
+GITLEAKS="$(command -v gitleaks || echo "$HOME/.local/bin/gitleaks")"
+
+if [ ! -x "$GITLEAKS" ]; then
+  echo "pre_push: gitleaks not found — refusing to push unscanned."
+  echo "Install it, or bypass once with: yadm push --no-verify"
+  exit 1
+fi
+
+GIT_DIR="$YADM_HOOK_REPO" \
+GIT_WORK_TREE="$YADM_HOOK_WORK" \
+"$GITLEAKS" git --redact --no-banner \
+  -c "$YADM_HOOK_WORK/.gitleaks.toml" \
+  --log-level error "$YADM_HOOK_WORK" || {
+  echo
+  echo "══ PUSH BLOCKED: a secret was found in this repo's history. ══"
+  echo "Removing the file in a NEW commit is not enough — the blob stays in"
+  echo "history. Rewrite the affected commits before pushing."
+  exit 1
+}

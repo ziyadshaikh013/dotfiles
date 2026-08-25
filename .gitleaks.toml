@@ -1,0 +1,29 @@
+# gitleaks config for this dotfiles repo.
+# Extends the built-in ruleset with formats it does not recognise.
+
+[extend]
+useDefault = true
+
+# Context7 keys have a distinctive prefix. The default `generic-api-key` rule
+# happens to catch these when they sit next to an "api-key" string, but not
+# when they appear alone — so match the prefix directly.
+[[rules]]
+id = "context7-api-key"
+description = "Context7 API key"
+regex = '''ctx7sk-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'''
+keywords = ["ctx7sk"]
+
+# Raw UUIDs used as bearer tokens (Coda, and many other APIs) are invisible to
+# the default ruleset — a UUID looks like any other identifier. Scope this to
+# an Authorization header so ordinary UUIDs in config don't trip it.
+[[rules]]
+id = "bearer-uuid-token"
+description = "UUID used as a bearer token in an Authorization header"
+regex = '''(?i)authorization"?\s*[:=]\s*"?bearer\s+[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'''
+keywords = ["authorization", "bearer"]
+
+[allowlist]
+description = "This config file itself contains credential patterns by design"
+paths = [
+  '''\.gitleaks\.toml$''',
+]
