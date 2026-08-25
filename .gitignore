@@ -1,0 +1,17 @@
+# yadm's worktree is $HOME, so this file is the repo's root .gitignore.
+# (Note: ~/.config/yadm/gitignore is NOT read by yadm 3.x — rules must live here.)
+
+# Auto-generated / machine-specific
+.config/nvim/lazy-lock.json
+.config/opencode/package-lock.json
+
+# Local AI tool config — contains API keys.
+# Template tracked as opencode.json.example instead.
+.config/opencode/opencode.json
+
+# ~/.gemini is never tracked. It holds API keys, machine state, a full Chromium
+# profile (cookies + saved logins) and agent session transcripts. No exceptions.
+.gemini/
+
+# Machine-local shell overrides (sourced by .zshrc if present)
+.zshrc.local
