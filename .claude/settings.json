@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [],
+    "deny": []
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/home/ziyad/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {},
+  "outputStyle": "Spartan",
+  "effortLevel": "medium",
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "remoteControlAtStartup": false,
+  "agentPushNotifEnabled": true,
+  "voiceEnabled": true
+}

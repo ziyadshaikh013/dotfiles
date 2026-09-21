@@ -1,0 +1,101 @@
+{
+  "version": 3,
+  "skills": {
+    "tsdown": {
+      "source": "rolldown/tsdown",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/rolldown/tsdown.git",
+      "skillPath": "skills/tsdown/SKILL.md",
+      "skillFolderHash": "c15bc24767006e90f0d547e7b74f23c7b7a07a54",
+      "installedAt": "2026-03-12T00:54:59.144Z",
+      "updatedAt": "2026-03-12T00:54:59.144Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-03-12T00:55:05.589Z",
+      "updatedAt": "2026-03-12T00:55:05.589Z"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "grill-me/SKILL.md",
+      "skillFolderHash": "58fccb407d628b1e89832b681410870826a947b9",
+      "installedAt": "2026-03-25T08:06:07.642Z",
+      "updatedAt": "2026-03-25T08:06:07.642Z"
+    },
+    "agent-slack": {
+      "source": "stablyai/agent-slack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/stablyai/agent-slack.git",
+      "skillPath": "skills/agent-slack/SKILL.md",
+      "skillFolderHash": "12f63388bd2b0e66dbe4012cd96bc226078341ae",
+      "installedAt": "2026-05-16T09:41:22.814Z",
+      "updatedAt": "2026-05-16T09:41:22.814Z"
+    },
+    "slack-messaging": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "skillPath": "partner-built/slack/skills/slack-messaging/SKILL.md",
+      "skillFolderHash": "d58fc568b025a5407ed6a7e6b738adc9a78db20a",
+      "installedAt": "2026-05-16T09:41:28.031Z",
+      "updatedAt": "2026-05-16T09:41:28.031Z"
+    },
+    "slack-workflows": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/claude-office-skills/skills.git",
+      "skillPath": "slack-workflows/SKILL.md",
+      "skillFolderHash": "65ffb2cd02b542c624539ab9363f3ffb7b4fa270",
+      "installedAt": "2026-05-16T09:41:28.384Z",
+      "updatedAt": "2026-05-16T09:41:28.384Z"
+    },
+    "slack-search": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "skillPath": "partner-built/slack/skills/slack-search/SKILL.md",
+      "skillFolderHash": "5fb707b6106a3361eccb56f200231c755b4eb20a",
+      "installedAt": "2026-05-16T09:41:28.531Z",
+      "updatedAt": "2026-05-16T09:41:28.531Z"
+    },
+    "slack": {
+      "source": "steipete/clawdis",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/steipete/clawdis.git",
+      "skillPath": "skills/slack/SKILL.md",
+      "skillFolderHash": "c0f8de4f71c86bef7b0fa3f555132d3c66664472",
+      "installedAt": "2026-05-16T09:42:02.169Z",
+      "updatedAt": "2026-05-16T09:42:02.169Z"
+    },
+    "teach": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/teach/SKILL.md",
+      "skillFolderHash": "fdc61615b4d56a04d88a69a135337f0cad9df235",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-06-09T12:29:58.499Z",
+      "updatedAt": "2026-06-09T12:29:58.499Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "claude-code"
+  ]
+}

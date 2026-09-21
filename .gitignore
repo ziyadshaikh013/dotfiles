@@ -15,3 +15,23 @@
 
 # Machine-local shell overrides (sourced by .zshrc if present)
 .zshrc.local
+
+# ~/.claude: only hand-written config is tracked. Everything else is
+# credentials (.credentials.json), session transcripts, caches, and content
+# Claude's own cloud sync manages (skills/synced, plugins/).
+.claude/*
+!.claude/settings.json
+!.claude/agents/
+!.claude/hooks/
+!.claude/output-styles/
+!.claude/skills/
+.claude/skills/synced/
+.claude.json
+.claude.json.*
+
+# Shared skills dir that ~/.claude/skills symlinks into. The lock file records
+# which skills are installed; ~/.agents holds nothing else worth tracking.
+.agents/*
+!.agents/skills/
+!.agents/.skill-lock.json
+.claude/skills/agent-slack
