@@ -1,0 +1,22 @@
+onboarding = false
+
+[ui]
+# Desktop tab bar position: "top" or "bottom" (tmux style)
+tab_bar_position = "bottom"
+
+# Ordered status entries at the right edge of the tab bar
+tab_bar_right = [
+  { type = "command", command = "/home/ziyad/.config/herdr/sys-stat.sh", interval_seconds = 2, timeout_seconds = 1 }
+]
+tab_bar_right_separator = " │ "
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[keys]
+remove_worktree = "prefix+shift+k"
+open_worktree = "prefix+shift+o"
+
+[session]
+resume_agents_on_restore = false
