@@ -23,6 +23,7 @@
 !.claude/settings.json
 !.claude/agents/
 !.claude/hooks/
+.claude/hooks/herdr-agent-state.sh
 !.claude/output-styles/
 !.claude/skills/
 .claude/skills/synced/
@@ -36,11 +37,10 @@
 !.agents/.skill-lock.json
 .claude/skills/agent-slack
 
-# ~/.config/herdr: only hand-written config and custom status scripts are tracked.
-# Sockets, logs, session state, and snapshots are runtime state.
+# ~/.config/herdr: only core config.toml is tracked.
+# Machine-specific status scripts, logs, sockets, and session data stay untracked.
 .config/herdr/*
 !.config/herdr/config.toml
-!.config/herdr/sys-stat.sh
 
 # Herdr project worktrees
 .herdr/
